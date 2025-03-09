@@ -92,10 +92,18 @@ I’ll rely on the following tools for data analysis and visualization:
      - **H₀**: Daily habits have no effect on the duration of my maximum undisrupted focus.  
      - **Hₐ**: One or more daily variables significantly impact the length of my maximum undisrupted focus.  
    - Run regression analysis to identify the strongest predictors of maximum undisrupted focus duration performance.
+   - Test for interaction effects between variables (e.g., sleep quality × caffeine intake).
 
 4. **Trend Analysis**  
    - Investigate patterns in performance over time, identifying peaks or plateaus.  
    - Analyze how body weight fluctuations and day-to-day difficulty ratings correlate with performance trends.
+  
+
+ 5. **Predictive Modeling**
+
+   - Develop a simple model that can estimate focus capacity based on morning conditions
+   - Test and refine model accuracy over time
+   - Create practical decision rules (e.g., "If sleep quality < 6, then increase caffeine by X")
 
 ---
 
@@ -107,6 +115,9 @@ Another example involves comparing performance on high-stress level days (e.g. s
 
 Similarly, I intend to monitor my mood fluctuations over time and examine their relationship with my ability to concentrate. For instance, if improvements in mood coincide with extended periods of uninterrupted focus, it could imply that factors like stress levels and sleep quality (both duration and restfulness) positively impact my mood. Furthermore, I’ll observe variables such as sleep patterns, caffeine consumption, stress levels, total study time, music usage during study, study location, and ambient noise. I’ll also explore whether certain combinations of factors—like sleep quality and caffeine intake—may interact to produce specific outcomes, such as enhanced focus or mood stability.
 
+For feature importance analysis, I'll use techniques to rank which variables most strongly predict focus duration. This might reveal that while I've been prioritizing caffeine management, perhaps sleep quality is actually three times more impactful.
+
+
 ---
 
 ## Conclusion
@@ -114,8 +125,11 @@ Similarly, I intend to monitor my mood fluctuations over time and examine their 
 By the end of this project, I hope to answer the following questions:
 
 - Which of my daily habits and factors influence my maximum length of undisrupted focus duration the most?
+- Which combinations of factors (e.g., sleep quality + caffeine intake) produce the optimal focus conditions?
+- Is there a threshold effect for certain variables (e.g., minimum hours of sleep needed)?
 - Can minimal, data-driven changes to my habits lead to measurable improvements?
 - How does sleep play a role in my focus performance?
+- Do different study locations show different sensitivity to ambient noise levels?
 - How can I use the findings from this project to apply to other aspects of my life that are affected by focus?
 
 This project goes beyond merely exploring the impacts of my ADHD brain and its maximum focus length. It also aims to leverage data science to effectively manage the effects of ADHD on various aspects of my life. Whether it’s mental health, productivity, or learning, comprehending the numerical indicators behind performance is crucial for achieving success.
