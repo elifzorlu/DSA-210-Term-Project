@@ -136,5 +136,5 @@ This project goes beyond merely exploring the impacts of my ADHD brain and its m
 
 ---
 
-I'm looking forward to figuringn out what data uncovers and use this project to help ease the obstacles that are accelerated by my ADHD,
+I'm looking forward to figuring out what data uncovers and use this project to help ease the obstacles that are accelerated by my ADHD,
 by discovering which factors I can manage in myself into my most efficient and productive self!
