@@ -122,15 +122,17 @@ For feature importance analysis, I'll use techniques to rank which variables mos
 
 ## Conclusion
 
-By the end of this project, I hope to answer the following questions:
+By the end of this project, I hope to answer:
+ 
+This project will not only help me manage my ADHD more effectively but also deepen my understanding of data science concepts.
 
-- Which of my daily habits and factors influence my maximum length of undisrupted focus duration the most?
+- Which factors most influence my focus length?
+- Can I predict focus length based on morning conditions?
 - Which combinations of factors (e.g., sleep quality + caffeine intake) produce the optimal focus conditions?
+- Are there interaction effects (e.g., sleep quality × caffeine intake)?
 - Is there a threshold effect for certain variables (e.g., minimum hours of sleep needed)?
-- Can minimal, data-driven changes to my habits lead to measurable improvements?
 - How does sleep play a role in my focus performance?
-- Do different study locations show different sensitivity to ambient noise levels?
-- How can I use the findings from this project to apply to other aspects of my life that are affected by focus?
+- How can I optimize my routines to improve focus?
 
 This project goes beyond merely exploring the impacts of my ADHD brain and its maximum focus length. It also aims to leverage data science to effectively manage the effects of ADHD on various aspects of my life. Whether it’s mental health, productivity, or learning, comprehending the numerical indicators behind performance is crucial for achieving success.
 
