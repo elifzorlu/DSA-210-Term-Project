@@ -96,7 +96,7 @@ I’ll rely on the following tools for data analysis and visualization:
 
 4. **Trend Analysis**  
    - Investigate patterns in performance over time, identifying peaks or plateaus.  
-   - Analyze how body weight fluctuations and day-to-day difficulty ratings correlate with performance trends.
+   - Analyze how mood fluctuations and day-to-day stress levels ratings correlate with performance trends.
   
 
  5. **Predictive Modeling**
