@@ -13,7 +13,7 @@ The plan is simple: track my daily factors and routines, correlate them with my 
 ## Objectives
 
 1. **Understand Performance Influencers**  
-   Explore the relationship between sleep, caffeine consumption, stress levels, ambient sound levels, listened to music or not, study location, the study window, number of claases I attended that day and lastly my total length of all my study sessions combined to uncover which of my daily habits and factors impact my maximum duration of undisrupted focus in a day 
+   Explore the relationship between sleep, caffeine consumption, stress levels, ambient sound levels, listened to music or not, study location, the study window, number of classes I attended that day and lastly my total length of all my study sessions combined to uncover which of my daily habits and factors impact my maximum duration of undisrupted focus in a day 
 
 2. **Identify Key Factors**  
 Identify the variables that have the most significant influence and design a targeted strategy to maximize undisrupted focus duration.
