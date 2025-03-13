@@ -81,7 +81,7 @@ I’ll rely on the following tools for data analysis and visualization:
 This is how I will be collecting my data: 
 
 - **Sleep Quality & Sleep Length**: I will derive this data by using an app called Sleep Cycle on my phone where I will place my phone close to my bed. I will use hours to measure my sleep duration and a scale 1-10 to measure my sleep quality as provided objectively and scientifically by the app I mentioned.
-- **Stress Levels**: I will use my Huawei smart watch to measure my stress levels. Objective biometric stress level measurement from my Huawei smartwatch (scale 1-10)
+- **Stress Levels**: I will use my Huawei smart watch to measure my stress levels. An objective biometric stress level measurement from my Huawei smartwatch (scale 1-10) will be used in my project.
 - **Caffeine Consumption**: I will use the data available on the website of the coffee place to measure the amount of caffeine per drink. (mg)
 - **Ambient Sound Levels**: I will use an online tool via my laptop to measure the average ambient sound levels during my peak focus, in decibels. (the website: https://www.checkhearing.org/soundmeter.php)
 - **The Study Window**: I will report the study window by using the clock. (e.g. morning (7.00 am - 12.00 pm), afternoon (12.00 pm - 05.00 pm), evening (05.00 pm - 09.00 pm), night (09.00 pm - 07.00 am))
