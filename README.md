@@ -13,7 +13,7 @@ The plan is simple: track my daily factors and routines, correlate them with my 
 ## Objectives
 
 1. **Understand Performance Influencers**  
-   Explore the relationship between sleep, caffeine consumption, stress levels, mood, ambient sound levels, challenge level of the subject, listened to music or not, study location, the study window and lastly my total length of all my study sessions combined to uncover which of my daily habits and factors impact my maximum duration of undisrupted focus in a day 
+   Explore the relationship between sleep, caffeine consumption, stress levels, ambient sound levels, listened to music or not, study location, the study window and lastly my total length of all my study sessions combined to uncover which of my daily habits and factors impact my maximum duration of undisrupted focus in a day 
 
 2. **Identify Key Factors**  
 Identify the variables that have the most significant influence and design a targeted strategy to maximize undisrupted focus duration.
@@ -28,7 +28,7 @@ Apply the concepts I’ve learned in my DSA 210 course to real-world scenarios, 
 
 ## Motivation
 
-In this project I aim to use my data skills in order to make my life easier and optimize my focus duration, andd here is why it matters:
+In this project I aim to use my data skills in order to make my life easier and optimize my focus duration, and here is why it matters:
 
 - **Personal Growth** 
 Discovering what affects my focus majorly will help me plan my days and habits accordingly, where I will be able to guess how much focusing I can do in a day considering my stats for that day, helping me approach my tasks more realistically.
@@ -51,8 +51,8 @@ The dataset for this project consists of months of daily records. Here’s what 
 - **Sleep Duration**: Total sleep duration (hours)
 - **Sleep Quality**: Ratings from the Sleep Cycle app (scale of 1–10)
 - **Caffeine Consumption**: Total amount of caffeine intake in a day (mg)
-- **Subject Challenge Level**: A self-assessed rating of how challenging the subject is (scale of 1–5)
-- **Mood**: A self-assessed rating of how my mood is that day (scale 1-10 where 1 represents extreme sadness or lack of motivation, and 10 indicates high energy and a positive emotional state
+- **Music Usage (Yes/No)**: Whether I have listened to music or not during my peak focus
+- **Amount of Classes Attended**: I will report the number of classes I have attended that day to measure my mental fatigue.
 - **Stress Levels**: The reported intensity of my stress levels using a smart watch (scale 1-10)
 - **Ambient Sound Level**: The average ambient sound in the background while studying (dB)
 - **The Study Window**: The hour window where my maximum duration of undisrupted focus has occurred
@@ -75,6 +75,22 @@ I’ll rely on the following tools for data analysis and visualization:
 
 ---
 
+## Data Collection Methods
+
+This is how I will be collecting my data: 
+
+- **Sleep Quality & Sleep Length**: I will derive this data by using an app called Sleep Cycle on my phone where I will place my phone close to my bed.
+- **Stress Levels**: I will use my Huawei smart watch to measure my stress levels.
+- **Caffeine Consumption**: I will use the data available on the website of the coffee place to measure the amount of caffeine per drink.
+- **Ambient Sound Levels**: I will use an online tool via my laptop to measure the average ambient sound levels during my peak focus. (the website: https://www.checkhearing.org/soundmeter.php)
+- **The Study Window**: I will report the study window by using the clock. (e.g. morning (7.00 am - 12.00 pm), afternoon (12.00 pm - 05.00 pm), evening (05.00 pm - 09.00 pm), night (09.00 pm - 07.00 am))
+- **Amount of Classes Attended**: I will report the number of classes I have attended that day to measure my mental fatigue.
+- **Study Location**: I will record the location where my maximum focus has occurred. (e.g. dorm room vs. library vs. home)
+- **Undisrupted Focus Length**: I will record all of my study sessions using a productivity app called Forest where it blocks all distractions from my phone. I will check the records on this app daily to pinpoint my maximum focus duration in a single session. As a note, in every study session I will keep studying until I realize my mind is involuntarily swaying into non-study related thought and stop the timer when I realize my study session is not being productive anymore (I will not leave my seat during my sessions nor change anything that might affect my study session).
+
+---
+
+
 ## Analysis Plan
 
 1. **Data Collection**  
@@ -96,7 +112,7 @@ I’ll rely on the following tools for data analysis and visualization:
 
 4. **Trend Analysis**  
    - Investigate patterns in performance over time, identifying peaks or plateaus.  
-   - Analyze how mood fluctuations and day-to-day stress levels ratings correlate with performance trends.
+   - Analyze how number of classes in a day and day-to-day stress levels ratings correlate with performance trends.
   
 
  5. **Predictive Modeling**
@@ -113,7 +129,7 @@ To demonstrate this, I’ll generate a scatter plot to visualize the correlation
 
 Another example involves comparing performance on high-stress level days (e.g. stress levels =  7-9) versus low-stress level days (e.g., stress levels = 1-3). This could reveal how mental and physical stress impacts my focus.
 
-Similarly, I intend to monitor my mood fluctuations over time and examine their relationship with my ability to concentrate. For instance, if improvements in mood coincide with extended periods of uninterrupted focus, it could imply that factors like stress levels and sleep quality (both duration and restfulness) positively impact my mood. Furthermore, I’ll observe variables such as sleep patterns, caffeine consumption, stress levels, total study time, music usage during study, study location, and ambient noise. I’ll also explore whether certain combinations of factors—like sleep quality and caffeine intake—may interact to produce specific outcomes, such as enhanced focus or mood stability.
+Similarly, I intend to monitor my stress fluctuations over time and examine their relationship with my ability to concentrate. For instance, if improvements in stress coincide with extended periods of uninterrupted focus, it could imply that factors like number of classes I had that day and caffeine consumption negatively impact my mood. Furthermore, I’ll observe variables such as sleep patterns, caffeine consumption, stress levels, total study time, music usage during study, study location, study window, and ambient noise. I’ll also explore whether certain combinations of factors—like music usage and ambient sound levels- may interact to produce specific outcomes, such as enhanced focus or mood stability.
 
 For feature importance analysis, I'll use techniques to rank which variables most strongly predict focus duration. This might reveal that while I've been prioritizing caffeine management, perhaps sleep quality is actually three times more impactful.
 
@@ -134,7 +150,8 @@ This project will not only help me manage my ADHD more effectively but also deep
 - How does sleep play a role in my focus performance?
 - How can I optimize my routines to improve focus?
 
-This project goes beyond merely exploring the impacts of my ADHD brain and its maximum focus length. It also aims to leverage data science to effectively manage the effects of ADHD on various aspects of my life. Whether it’s mental health, productivity, or learning, comprehending the numerical indicators behind performance is crucial for achieving success.
+This project goes beyond merely exploring the impacts of my ADHD brain and its maximum focus length. It also aims to use data science to effectively manage the effects of ADHD on various aspects of my life. Whether it’s mental health, productivity, or learning, comprehending the numerical indicators behind performance is crucial for achieving success; it aims to use data science to develop better self-management strategies.
+
 
 ---
 
