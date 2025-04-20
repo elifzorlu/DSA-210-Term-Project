@@ -69,7 +69,7 @@ I’ll rely on the following tools for data analysis and visualization:
 
 - **Python**: For data cleaning and statistical analysis  
 - **Pandas**: To manipulate and preprocess data  
-- **Matplotlib and Seaborn**: For creating visualizations (scatter plots, heatmaps, time series)  
+- **Matplotlib and Seaborn**: For creating visualizations (scatter plots, heatmaps,boxplots, time series)  
 - **SciPy**: For hypothesis testing and regression analysis  
 
 ---
