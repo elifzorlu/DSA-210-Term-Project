@@ -94,13 +94,71 @@ This is how I will be collecting my data:
 1. **Data Collection**  
    - Import daily Excel records into a Pandas DataFrame and preprocess the data by handling missing values and standardizing units.  
 
-2. **Visualization**  
-   - Use scatter plots, heatmaps, and boxplots, histograms to explore relationships between variables.  
-   - Examples include:
-      - Heatmap showing correlations between all variables  
-     - Scatter plot of sleep quality vs. maximum focus duration etc.  
-     - Boxplot of listened to music vs. no music's impact on undisrupted focus duration etc.
-     - Histogram of caffeine intake vs. undisrupted focus duration etc.
+2. **Visualization**
+
+### **Univariate Analysis:**
+
+#### **Correlation Matrix:**
+- A heatmap was generated to show the correlation between variables in the dataset.
+
+#### **Key Observations:**
+- **Sleep quality** and **length** are positively correlated with **focus duration**, indicating that better sleep enhances focus.
+- **Stress** and **caffeine** have a negative relationship with focus, especially when combined in the **'stimulation load'** variable.
+- **Ambient sound** and **music** have minimal impact on focus duration.
+
+#### **Scatterplot: Sleep Quality vs Focus Duration:**
+- Showed an upward trend where higher sleep quality was associated with longer focus durations.
+
+#### **Barplot: Sleep Quality x Focus Duration Bins:**
+- Grouped sleep quality into bins and analyzed average focus duration within each sleep quality category.
+
+---
+
+### **Bivariate Analysis:**
+
+#### **Sleep Length vs Focus Duration:**
+- Scatterplot and binning analysis show that **longer sleep** is generally associated with **longer focus durations**.
+
+#### **Caffeine Consumption vs Focus Duration:**
+- A non-linear relationship was observed between **caffeine intake** and **focus duration**. 
+  - Extremely low or high caffeine consumption correlates with better focus, while moderate consumption is less effective.
+
+---
+
+### **Multivariate Analysis:**
+
+#### **Caffeine x Sleep Length Interaction:**
+- A boxplot shows that **high caffeine intake** paired with **long sleep** is most beneficial for focus. **Inadequate sleep** reduces the effect of high caffeine.
+
+#### **Music vs Focus Duration:**
+- A boxplot suggests that **listening to music** might have a slight positive effect on focus duration, but more analysis is required.
+
+#### **Stress Level vs Focus Duration:**
+- A boxplot was used to assess how **stress** affects focus. It was analyzed but not explicitly interpreted in the code, so additional exploration could be beneficial.
+
+#### **Location vs Focus Duration:**
+- A boxplot shows that the **dorm** and **library** are associated with **longer**, more **variable focus durations**, while **home** has shorter, more consistent focus times. An **ANOVA test** would be useful to confirm these differences.
+
+#### **Study Window vs Focus Duration:**
+- A boxplot indicates that different **study windows** (e.g., night vs. day) can impact focus duration, with some windows showing better results.
+
+#### **Ambient Sound vs Focus Duration:**
+- **Scatterplot** and **barplot** analysis showed that **noise levels** have an impact on focus, with very noisy environments negatively affecting focus duration.
+
+#### **Stimulation Load vs Focus Duration:**
+- A scatterplot reveals that **moderate stimulation** (balanced stress and caffeine) leads to the best focus duration. Extreme values (either too low or too high) result in reduced focus.
+
+---
+
+### **Visualization Tools:**
+
+To explore relationships between variables, the following visualizations were used:
+- **Heatmap** showing correlations between all variables.
+- **Scatter plot** of **sleep quality vs. maximum focus duration**.
+- **Boxplot** of **listened to music vs. no music's impact on undisrupted focus duration**.
+- **Histogram** of **caffeine intake vs. undisrupted focus duration**.
+
+
 
 3. **Hypothesis Testing**  
    - Test the hypothesis:
