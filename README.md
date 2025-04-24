@@ -69,7 +69,7 @@ I’ll rely on the following tools for data analysis and visualization:
 
 - **Python**: For data cleaning and statistical analysis  
 - **Pandas**: To manipulate and preprocess data  
-- **Matplotlib and Seaborn**: For creating visualizations (scatter plots, heatmaps,boxplots, time series)  
+- **Matplotlib and Seaborn**: For creating visualizations (scatter plots, heatmaps, boxplots, histograms)  
 - **SciPy**: For hypothesis testing and regression analysis  
 
 ---
@@ -95,18 +95,21 @@ This is how I will be collecting my data:
    - Import daily Excel records into a Pandas DataFrame and preprocess the data by handling missing values and standardizing units.  
 
 2. **Visualization**  
-   - Use scatter plots, heatmaps, and time series plots to explore relationships between variables.  
+   - Use scatter plots, heatmaps, and boxplots, histograms to explore relationships between variables.  
    - Examples include:
       - Heatmap showing correlations between all variables  
-     - Scatter plot of sleep quality vs. maximum focus duration  
-     - Time series plot comparing performance trends over the months  
+     - Scatter plot of sleep quality vs. maximum focus duration etc.  
+     - Boxplot of listened to music vs. no music's impact on undisrupted focus duration etc.
+     - Histogram of caffeine intake vs. undisrupted focus duration etc.
 
 3. **Hypothesis Testing**  
-   - Test hypotheses like:  
-     - **H₀**: Daily habits have no effect on the duration of my maximum undisrupted focus.  
-     - **Hₐ**: One or more daily variables significantly impact the length of my maximum undisrupted focus.  
-   - Run regression analysis to identify the strongest predictors of maximum undisrupted focus duration performance.
-   - Test for interaction effects between variables (e.g., sleep quality × caffeine intake).
+   - Test the hypothesis:
+     - **H₀**: None of the daily life variables have a statistically significant effect on the duration of my daily maximum undisrupted focus.
+     - **Hₐ**: At least one of the daily life variables has a statistically significant effect on the duration of my daily maximum undisrupted focus.
+   - Run regression analysis to identify the strongest predictors of maximum undisrupted focus duration performance. This will help assess which daily life variables (e.g., sleep quality, caffeine intake, stress level, etc.) most strongly influence the duration of focus.
+   - Test for interaction effects between variables (e.g., sleep length × caffeine intake).
+   - Individually check each variable’s relationship with daily maximum undisrupted focus duration. We will look at each variable, such as sleep quality, caffeine intake, and stress, to see if it directly impacts daily maximum undisrupted focus duration.
+   - Combine p-values using Fisher's method (Chi-square test) to evaluate the overall significance of all variables together. This test will provide a single p-value that helps determine whether the combination of these factors (even if individually insignificant) has a statistically significant effect on my daily maximum undisrupted focus
 
 4. **Trend Analysis**  
    - Investigate patterns in performance over time, identifying peaks or plateaus.  
@@ -127,7 +130,8 @@ To demonstrate this, I’ll generate a scatter plot to visualize the correlation
 
 Another example involves comparing performance on high-stress level days (e.g. stress levels =  7-9) versus low-stress level days (e.g., stress levels = 1-3). This could reveal how mental and physical stress impacts my focus.
 
-Similarly, I intend to monitor my stress fluctuations over time and examine their relationship with my ability to concentrate. For instance, if increased stress coincides with extended periods of uninterrupted focus, it could imply that factors like sleep quality and caffeine consumption negatively impact my stress levels. Furthermore, I’ll observe variables such as sleep patterns, caffeine consumption, stress levels, music usage during study, study location, study window, and ambient noise. I’ll also explore whether certain combinations of factors—like music usage and study locations- may interact to produce specific outcomes, such as enhanced focus or stress levels fluctuations.
+Similarly, I intend to explore how caffeine consumption affects my ability to concentrate, depending on whether I had a good or bad night’s sleep the night before. For example, I will examine whether caffeine helps improve focus on days when I’ve had good sleep versus days when my sleep quality was poor. This will help assess if caffeine acts as a positive factor in enhancing focus on well-rested days, or if its effects are diminished when I’ve had inadequate sleep. Additionally, I’ll create a new variable called stimulation load, derived from both my stress levels and caffeine consumption, to understand how these two factors together influence my ability to concentrate.
+
 
 For feature importance analysis, I'll use techniques to rank which variables most strongly predict focus duration. This might reveal that while I've been prioritizing caffeine management, perhaps sleep quality is actually three times more impactful.
 
@@ -155,3 +159,4 @@ This project goes beyond merely exploring the impacts of my ADHD brain and its m
 
 I'm looking forward to figuring out what data uncovers and use this project to help ease the obstacles that are accelerated by my ADHD,
 by discovering which factors I can manage in myself into my most efficient and productive self!
+
