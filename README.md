@@ -217,6 +217,14 @@ Similarly, I intend to explore how caffeine consumption affects my ability to co
 For feature importance analysis, I'll use techniques to rank which variables most strongly predict focus duration. This might reveal that while I've been prioritizing caffeine management, perhaps sleep quality is actually three times more impactful.
 
 
+## Future Work
+
+- Conduct regression analysis to identify key predictors of focus duration.
+
+- Perform trend analysis to uncover patterns over time.
+
+- Develop predictive models to forecast focus performance based on lifestyle factors.
+  
 ---
 
 ## Conclusion
