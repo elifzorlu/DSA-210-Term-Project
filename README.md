@@ -94,59 +94,77 @@ This is how I will be collecting my data:
 1. **Data Collection**  
    - Import daily Excel records into a Pandas DataFrame and preprocess the data by handling missing values and standardizing units.  
 
+
 2. **Visualization**
 
-### **Univariate Analysis:**
+### **Univariate Analysis**
 
-#### **Correlation Matrix:**
-- A heatmap was generated to show the correlation between variables in the dataset.
+#### **Correlation Matrix**
+- A heatmap was generated to visualize the correlation between variables.
 
 #### **Key Observations:**
-- **Sleep quality** and **length** are positively correlated with **focus duration**, indicating that better sleep enhances focus.
-- **Stress** and **caffeine** have a negative relationship with focus, especially when combined in the **'stimulation load'** variable.
-- **Ambient sound** and **music** have minimal impact on focus duration.
+- **Sleep length** (+0.33) and **sleep quality** (+0.12) are positively correlated with **focus duration**, implying that prioritizing rest directly supports sustained attention.
+- **Stress** and **caffeine** are strongly correlated with each other (+0.52) and both show negative correlations with focus (–0.27 and –0.16, respectively). Their combined variable, **‘stimulation load’**, shows the most pronounced negative impact on focus (–0.45).
+- **Sleep length** and **sleep quality** are closely linked (+0.72), indicating mutual reinforcement—improving one likely benefits the other.
+- **Ambient sound** and **music** show weak correlations with focus duration (< ±0.2), suggesting minimal standalone influence.
 
-#### **Scatterplot: Sleep Quality vs Focus Duration:**
-- Showed an upward trend where higher sleep quality was associated with longer focus durations.
-
-#### **Barplot: Sleep Quality x Focus Duration Bins:**
-- Grouped sleep quality into bins and analyzed average focus duration within each sleep quality category.
-
----
-
-### **Bivariate Analysis:**
-
-#### **Sleep Length vs Focus Duration:**
-- Scatterplot and binning analysis show that **longer sleep** is generally associated with **longer focus durations**.
-
-#### **Caffeine Consumption vs Focus Duration:**
-- A non-linear relationship was observed between **caffeine intake** and **focus duration**. 
-  - Extremely low or high caffeine consumption correlates with better focus, while moderate consumption is less effective.
+#### **Histogram: Focus Duration Distribution**
+- A histogram of maximum daily focus durations reveals two key patterns:
+  - **Below 60 minutes:** Often indicates suboptimal conditions (e.g., poor sleep, stress, noise).
+  - **Above 60 minutes:** Suggests the presence of favorable cognitive or environmental factors, worth replicating.
 
 ---
 
-### **Multivariate Analysis:**
+### **Bivariate Analysis**
 
-#### **Caffeine x Sleep Length Interaction:**
-- A boxplot shows that **high caffeine intake** paired with **long sleep** is most beneficial for focus. **Inadequate sleep** reduces the effect of high caffeine.
+#### **Sleep Quality vs Focus Duration**
+- A scatterplot revealed a **threshold effect**: when sleep quality drops below ~3, focus duration declines sharply. Above this threshold, focus durations are more stable, though not always dramatically higher.
 
-#### **Music vs Focus Duration:**
-- A boxplot suggests that **listening to music** might have a slight positive effect on focus duration, but more analysis is required.
+#### **Barplot: Sleep Quality Bins x Average Focus**
+- Binning analysis shows that average focus durations generally increase with sleep quality. Poor sleep quality almost always leads to shorter focus sessions.
 
-#### **Stress Level vs Focus Duration:**
-- A boxplot was used to assess how **stress** affects focus. It was analyzed but not explicitly interpreted in the code, so additional exploration could be beneficial.
+#### **Sleep Length vs Focus Duration**
+- A positive relationship is visible: **more sleep** often results in **longer focus periods**, though variability remains. This supports the value of sleep consistency.
 
-#### **Location vs Focus Duration:**
-- A boxplot shows that the **dorm** and **library** are associated with **longer**, more **variable focus durations**, while **home** has shorter, more consistent focus times. An **ANOVA test** would be useful to confirm these differences.
+#### **Caffeine Consumption vs Focus Duration**
+- The scatterplot suggests a **nonlinear pattern**:
+  - **Low and high** caffeine levels are sometimes associated with longer focus.
+  - **Moderate** levels often correlate with shorter sessions.
+  - This implies that caffeine alone isn’t a consistent predictor—**sleep and stress** likely moderate its effect.
 
-#### **Study Window vs Focus Duration:**
-- A boxplot indicates that different **study windows** (e.g., night vs. day) can impact focus duration, with some windows showing better results.
+---
 
-#### **Ambient Sound vs Focus Duration:**
-- **Scatterplot** and **barplot** analysis showed that **noise levels** have an impact on focus, with very noisy environments negatively affecting focus duration.
+### **Multivariate Analysis**
 
-#### **Stimulation Load vs Focus Duration:**
-- A scatterplot reveals that **moderate stimulation** (balanced stress and caffeine) leads to the best focus duration. Extreme values (either too low or too high) result in reduced focus.
+#### **Caffeine x Sleep Length Interaction**
+- A boxplot reveals that **caffeine only enhances focus when paired with sufficient sleep**.
+  - With inadequate sleep, caffeine loses effectiveness or may even impair focus.
+  - This supports a **nonlinear, sleep-dependent benefit** of caffeine.
+
+#### **Music vs Focus Duration**
+- While the effect is small, **music may slightly improve focus duration**. However, results are inconclusive and warrant further analysis.
+
+#### **Stress Level vs Focus Duration**
+- Mild to moderate stress (levels 3–6) appears to slightly improve focus, likely by boosting arousal or motivation.
+- **Excessive stress (7+) leads to reduced and erratic focus**, though rare exceptions (e.g., a 125-minute session at stress level 8) may reflect ADHD-induced hyperfocus.
+- Overall, balance is key—**mild pressure helps, but overload harms**.
+
+#### **Study Location vs Focus Duration**
+- **Dorm and library** are associated with **longer and more variable focus times**, possibly due to lower distractions or greater study intent.
+- **Home** yields **shorter, more consistent sessions**, suggesting distractions or comfort-related underperformance.
+- An **ANOVA test** was used to confirm the statistical significance of location-based differences.
+
+#### **Study Window vs Focus Duration**
+- Certain times of day (e.g., **night**) seem to support longer focus periods.
+- The effect may be influenced by circadian rhythm or personal preference, suggesting a need to optimize study windows.
+
+#### **Ambient Sound vs Focus Duration**
+- Focus is reduced in **very noisy** environments.
+- **Moderate sound levels** may have a **neutral or slightly positive effect**, suggesting complete silence isn’t always necessary.
+
+#### **Stimulation Load (Stress + Caffeine) vs Focus Duration**
+- **Moderate stimulation** levels support optimal focus.
+- Too little or too much stimulation reduces performance, confirming that a **balanced state—neither sluggish nor overstimulated—is ideal for sustained attention**.
 
 ---
 
@@ -156,14 +174,19 @@ To explore relationships between variables, the following visualizations were us
 - **Heatmap** showing correlations between all variables.
 - **Scatter plot** of **sleep quality vs. maximum focus duration**.
 - **Boxplot** of **listened to music vs. no music's impact on undisrupted focus duration**.
-- **Histogram** of **caffeine intake vs. undisrupted focus duration**.
+- **Histogram** of **undisrupted focus duration**.
+- **Barplot** of **binned sleep quality** vs **undisrupted focus duration**.
+  .
+  .
+  .
 
 
 
 3. **Hypothesis Testing**  
    - Test the hypothesis:
-     - **H₀**: None of the daily life variables have a statistically significant effect on the duration of my daily maximum undisrupted focus.
-     - **Hₐ**: At least one of the daily life variables has a statistically significant effect on the duration of my daily maximum undisrupted focus.
+     - **H₀**: None of the daily life variables have a statistically significant effect on the duration of my daily maximum undisrupted focus as a person with diagnosed ADHD.
+
+     - **Hₐ**: At least one of the daily life variables has a statistically significant effect on the duration of my daily maximum undisrupted focus as a person with diagnosed ADHD.
    - Run regression analysis to identify the strongest predictors of maximum undisrupted focus duration performance. This will help assess which daily life variables (e.g., sleep quality, caffeine intake, stress level, etc.) most strongly influence the duration of focus.
    - Test for interaction effects between variables (e.g., sleep length × caffeine intake).
    - Individually check each variable’s relationship with daily maximum undisrupted focus duration. We will look at each variable, such as sleep quality, caffeine intake, and stress, to see if it directly impacts daily maximum undisrupted focus duration.
