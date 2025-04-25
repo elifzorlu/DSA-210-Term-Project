@@ -89,7 +89,7 @@ This is how I will be collecting my data:
 ---
 
 
-## Analysis Plan
+## Analysis Findings
 
 1. **Data Collection**  
    - Import daily Excel records into a Pandas DataFrame and preprocess the data by handling missing values and standardizing units.  
