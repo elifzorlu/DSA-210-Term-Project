@@ -10,6 +10,22 @@ The plan is simple: track my daily factors and routines, correlate them with my 
 
 ---
 
+## Project Structure
+
+01_Load_Clean_Correct
+
+02_Visualizations
+
+03_Correlation_Heatmap
+
+04_Bivariate_Insights
+
+05_Hypothesis_Tests
+
+06_Trend_Analysis
+
+07_Predictive_Modeling
+
 ## Objectives
 
 1. **Understand Performance Influencers**  
@@ -70,7 +86,9 @@ I’ll rely on the following tools for data analysis and visualization:
 - **Python**: For data cleaning and statistical analysis  
 - **Pandas**: To manipulate and preprocess data  
 - **Matplotlib and Seaborn**: For creating visualizations (scatter plots, heatmaps, boxplots, histograms)  
-- **SciPy**: For hypothesis testing and regression analysis  
+- **SciPy**: For hypothesis testing and regression analysis
+- **Scikitlearn**: For building and evaluating predictive models
+
 
 ---
 
@@ -187,21 +205,30 @@ To explore relationships between variables, the following visualizations were us
      - **H₀**: None of the daily life variables have a statistically significant effect on the duration of my daily maximum undisrupted focus as a person with diagnosed ADHD.
 
      - **Hₐ**: At least one of the daily life variables has a statistically significant effect on the duration of my daily maximum undisrupted focus as a person with diagnosed ADHD.
-   - Run regression analysis to identify the strongest predictors of maximum undisrupted focus duration performance. This will help assess which daily life variables (e.g., sleep quality, caffeine intake, stress level, etc.) most strongly influence the duration of focus.
-   - Test for interaction effects between variables (e.g., sleep length × caffeine intake).
-   - Individually check each variable’s relationship with daily maximum undisrupted focus duration. We will look at each variable, such as sleep quality, caffeine intake, and stress, to see if it directly impacts daily maximum undisrupted focus duration.
-   - Combine p-values using Fisher's method (Chi-square test) to evaluate the overall significance of all variables together. This test will provide a single p-value that helps determine whether the combination of these factors (even if individually insignificant) has a statistically significant effect on my daily maximum undisrupted focus
+    
+     - Test for interaction effects between variables (e.g., sleep length × caffeine intake).
+     - Individually check each variable’s relationship with daily maximum undisrupted focus duration. We will look at each variable, such as sleep quality, caffeine intake, and stress, to see if it directly impacts daily maximum undisrupted focus duration.
+     - Combine p-values using Fisher's method (Chi-square test) to evaluate the overall significance of all variables together. This test will provide a single p-value that helps determine whether the combination of these factors (even if individually insignificant) has a statistically significant effect on my daily maximum undisrupted focus
 
-4. **Trend Analysis**  
-   - Investigate patterns in performance over time, identifying peaks or plateaus.  
-   - Analyze how number of classes in a day and day-to-day stress levels ratings correlate with performance trends.
+4. **Regression Analysis**
+   - Applied Linear Regression, Decision Tree, and Random Forest models to identify which daily life variables (like sleep quality, caffeine intake, and stress level) predict focus performance.
+   - Assessed model accuracy using R² scores and Mean Squared Error (MSE).
+   - Used feature importance (from Random Forest) to determine the most influential predictors.
+   - Analyzed individual correlations between key variables (e.g., sleep, caffeine, stress) and focus performance.
+
+5. **Trend Exploration**
+   - Investigated how focus levels change over time.
   
+   - Explored how the number of classes and stress levels correlate with focus trends across days.
 
- 5. **Predictive Modeling**
 
-   - Develop a simple model that can estimate focus capacity based on morning conditions
-   - Test and refine model accuracy over time
-   - Create practical decision rules (e.g., "If sleep quality < 6, then increase caffeine by X")
+
+ 
+
+ 6. **Predictive Modeling**
+
+   - Trained machine learning models to estimate focus capacity using morning conditions.
+   - Identified top predictors that could guide realistic planning and goal setting for the day.
 
 ---
 
@@ -217,14 +244,6 @@ Similarly, I intend to explore how caffeine consumption affects my ability to co
 For feature importance analysis, I'll use techniques to rank which variables most strongly predict focus duration. This might reveal that while I've been prioritizing caffeine management, perhaps sleep quality is actually three times more impactful.
 
 
-## Future Work
-
-- Conduct regression analysis to identify key predictors of focus duration.
-
-- Perform trend analysis to uncover patterns over time.
-
-- Develop predictive models to forecast focus performance based on lifestyle factors.
-  
 ---
 
 ## Conclusion
